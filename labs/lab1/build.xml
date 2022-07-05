@@ -1,0 +1,32 @@
+<project name="lab1" default = "copy">
+    <target name="init">
+        <echo message="Building lab1 Project" />
+        <property name="vm_dir" value="\\HOME-PC\webapps\lab1\"/>
+    </target>
+    <target name="create" depends ="init">
+        <delete dir= "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <mkdir dir= "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <mkdir dir= "C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\WEB-INF" />
+        <delete dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}"/>
+    </target>
+    <target name="copy" depends ="create">
+        <copy file= "D:\!интернет\лабы\lab1\build.xml" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\WEB-INF\" />
+        <copy file= "D:\!интернет\лабы\lab1\web.xml" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\WEB-INF\" />
+        <copy file= "D:\!интернет\лабы\lab1\index.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <copy file= "D:\!интернет\лабы\lab1\cat.jpg" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <copy file= "D:\!интернет\лабы\lab1\cat2.jpg" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <copy file= "D:\!интернет\лабы\lab1\cat3.png" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <copy file= "D:\!интернет\лабы\lab1\address.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+        <copy file= "D:\!интернет\лабы\lab1\education.html" todir="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\lab1\" />
+
+        <copy file= "D:\!интернет\лабы\lab1\build.xml" todir="${vm_dir}WEB-INF\" />
+        <copy file= "D:\!интернет\лабы\lab1\web.xml" todir="${vm_dir}WEB-INF\" />
+        <copy file= "D:\!интернет\лабы\lab1\index.html" todir="${vm_dir}" />
+        <copy file= "D:\!интернет\лабы\lab1\cat.jpg" todir="${vm_dir}" />
+        <copy file= "D:\!интернет\лабы\lab1\cat2.jpg" todir="${vm_dir}" />
+        <copy file= "D:\!интернет\лабы\lab1\cat3.png" todir="${vm_dir}" />
+        <copy file= "D:\!интернет\лабы\lab1\address.html" todir="${vm_dir}" />
+        <copy file= "D:\!интернет\лабы\lab1\education.html" todir="${vm_dir}" />
+    </target>
+</project> 

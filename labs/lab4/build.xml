@@ -1,0 +1,55 @@
+<project name="lab4" default = "copy">
+    <target name="init">
+        <echo message="Building lab4 Project" />
+        <property name="vm_dir" value="\\HOME-PC\webapps\lab4\"/>
+        <property name="server" value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\"/>
+        <property name="project_dir" value="D:\!internet\labs\lab4\"/>
+    </target>
+    <target name="compile" depends="init">
+        <delete verbose="true">
+            <fileset dir="${project_dir}build"/>
+        </delete>
+        <javac srcdir="${project_dir}src"
+                destdir="${project_dir}build">
+                <classpath>
+                    <fileset dir="${project_dir}lib"/>
+                </classpath>
+        </javac>
+    </target>
+    <target name="create" depends ="compile">
+        <delete dir= "${server}lab4\" />
+        <mkdir dir= "${server}lab4\" />
+        <mkdir dir= "${server}lab4\WEB-INF"/>
+          <delete dir="${vm_dir}"/>
+          <mkdir dir="${vm_dir}"/>
+           <mkdir dir="${vm_dir}WEB-INF\classes"/>
+     </target>
+     <target name="copy" depends ="create">
+         <copy file= "${project_dir}build.xml" todir="${server}lab4\WEB-INF\" />
+         <copy file= "${project_dir}WEB-INF\web.xml" todir="${server}lab4\WEB-INF\" />
+         <copy todir="${server}lab4/">
+                 <fileset dir="${project_dir}jsp"/>
+         </copy>
+
+         <copy todir="${server}lab4/">
+             <fileset dir="${project_dir}js"/>
+         </copy>
+         <copy todir="${server}lab4\WEB-INF\classes">
+             <fileset dir="${project_dir}build"/>
+         </copy>
+
+            <copy file= "${project_dir}build.xml" todir="${vm_dir}WEB-INF\" />
+            <copy file= "${project_dir}WEB-INF\web.xml" todir="${vm_dir}WEB-INF\" />
+         <copy todir="${vm_dir}">
+             <fileset dir="${project_dir}jsp"/>
+         </copy>
+
+         <copy todir="${vm_dir}">
+             <fileset dir="${project_dir}js"/>
+         </copy>
+               <copy todir="${vm_dir}WEB-INF\classes">
+                   <fileset dir="${project_dir}build"/>
+               </copy>
+
+           </target>
+       </project>

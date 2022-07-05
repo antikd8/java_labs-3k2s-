@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>AS_3082CTV10</display-name>
+
+    <servlet>
+        <servlet-name>SssHeader</servlet-name>
+        <servlet-class>SssHeader</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SssHeader</servlet-name>
+        <url-pattern>/SssHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SssJson</servlet-name>
+        <servlet-class>SssJson</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SssJson</servlet-name>
+        <url-pattern>/SssJson</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SssXml</servlet-name>
+        <servlet-class>SssXml</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SssXml</servlet-name>
+        <url-pattern>/SssXml</url-pattern>
+    </servlet-mapping>
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app> 

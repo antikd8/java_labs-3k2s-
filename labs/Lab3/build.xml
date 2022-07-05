@@ -1,0 +1,47 @@
+<project name="lab2" default = "copy">
+    <target name="init">
+        <echo message="Building lab3 Project" />
+        <property name="vm_dir" value="\\HOME-PC\webapps\lab3\"/>
+        <property name="server" value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\"/>
+        <property name="project_dir" value="D:\!internet\labs\Lab3\"/>
+    </target>
+    <target name="compile" depends="init">
+        <delete verbose="true">
+            <fileset dir="${project_dir}build"/>
+        </delete>
+        <javac srcdir="${project_dir}src"
+                destdir="${project_dir}build">
+                <classpath>
+                    <fileset dir="${project_dir}lib"/>
+                </classpath>
+        </javac>
+    </target>
+    <target name="create" depends ="compile">
+        <delete dir= "${server}lab3\" />
+        <mkdir dir= "${server}lab3\" />
+        <mkdir dir= "${server}lab3\WEB-INF"/>
+        <delete dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}"/>
+         <mkdir dir="${vm_dir}WEB-INF\classes"/>
+     </target>
+     <target name="copy" depends ="create">
+         <copy file= "${project_dir}build.xml" todir="${server}lab3\WEB-INF\" />
+         <copy file= "${project_dir}WEB-INF\web.xml" todir="${server}lab3\WEB-INF\" />
+         <copy file= "${project_dir}indexRedirect.html" todir="${server}lab3\" />
+         <copy file= "${project_dir}indexReaddress.html" todir="${server}lab3\" />
+         <copy file= "${project_dir}redirect_page.html" todir="${server}lab3\" />
+         <copy todir="${server}lab3\WEB-INF\classes">
+             <fileset dir="${project_dir}build"/>
+         </copy>
+
+            <copy file= "${project_dir}build.xml" todir="${vm_dir}WEB-INF\" />
+            <copy file= "${project_dir}WEB-INF\web.xml" todir="${vm_dir}WEB-INF\" />
+            <copy file= "${project_dir}indexRedirect.html" todir="${vm_dir}" />
+            <copy file= "${project_dir}indexReaddress.html" todir="${vm_dir}" />
+            <copy file= "${project_dir}redirect_page.html" todir="${vm_dir}" />
+               <copy todir="${vm_dir}WEB-INF\classes">
+                   <fileset dir="${project_dir}build"/>
+               </copy>
+
+           </target>
+       </project>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1" metadata-complete="true">
+
+  <display-name>lab3</display-name>
+  <servlet>
+    <servlet-name>Sss servlet</servlet-name>
+    <servlet-class>Sss</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>Ggg servlet</servlet-name>
+    <servlet-class>Ggg</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SssRedirect servlet</servlet-name>
+    <servlet-class>SssRedirect</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GggRedirect servlet</servlet-name>
+    <servlet-class>GggRedirect</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>SssReaddress servlet</servlet-name>
+    <servlet-class>SssReaddress</servlet-class>
+  </servlet>
+
+  <servlet>
+    <servlet-name>GggReaddress servlet</servlet-name>
+    <servlet-class>GggReaddress</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Sss servlet</servlet-name>
+    <url-pattern>/Sss</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>Ggg servlet</servlet-name>
+    <url-pattern>/Ggg</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SssRedirect servlet</servlet-name>
+    <url-pattern>/SssRedirect</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GggRedirect servlet</servlet-name>
+    <url-pattern>/GggRedirect</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>GggReaddress servlet</servlet-name>
+    <url-pattern>/GggReaddress</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>SssReaddress servlet</servlet-name>
+    <url-pattern>/SssReaddress</url-pattern>
+  </servlet-mapping>
+
+
+
+  <welcome-file-list>
+    <welcome-file>indexReaddress.html</welcome-file>
+  </welcome-file-list>
+
+  <welcome-file-list>
+    <welcome-file>indexRedirect.html</welcome-file>
+  </welcome-file-list>
+
+
+
+
+</web-app>

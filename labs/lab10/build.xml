@@ -1,0 +1,74 @@
+<project name="lab10" default="copy">
+
+    <target name="init">
+        <echo message="Building lab10 Project"/>
+        <property name="server"
+                  value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\"/> <!--  E:\Apache Software Foundation\Tomcat 10.0\  \\172.16.193.69\-->
+        <property name="work"
+                  value="D:\!internet\labs\lab10\"/>
+    </target>
+
+    <target name="compile" depends="init">
+
+        <delete verbose="true">
+            <fileset dir="${work}build"/>
+        </delete>
+
+        <javac
+                target="8"
+                includeantruntime="false"
+                srcdir="${work}src"
+                destdir="${work}build">
+            <classpath>
+                <fileset file="${server}lib\servlet-api.jar"/>
+                <fileset file="${server}lib\tomcat-el-api-10.0.2.jar"/>
+                <fileset file="${server}lib\tomcat-jsp-api-10.0.2.jar"/>
+                <fileset file="${work}WEB-INF\lib\commons-httpclient-3.1.jar"/>
+
+                <fileset file="${work}WEB-INF\lib\jtds-1.3.1.jar"/>
+
+            </classpath>
+        </javac>
+
+
+        <!--<javac
+        target="8"
+        includeantruntime="false"
+        srcdir = "${work}src"
+        destdir = "${work}build">
+           <classpath>
+               <fileset dir="${work}WEB-INF\lib" />
+           </classpath>
+        </javac> -->
+
+    </target>
+
+    <target name="create" depends="compile">
+        <delete dir="${server}webapps\lab10\"/>
+        <mkdir dir="${server}webapps\lab10\"/>
+        <mkdir dir="${server}webapps\lab10\WEB-INF"/>
+        <mkdir dir="${server}webapps\lab10\WEB-INF\classes"/>
+        <mkdir dir="${server}webapps\lab10\WEB-INF\lib"/>
+        <mkdir dir="${server}webapps\lab10\jsp"/>
+    </target>
+
+    <target name="copy" depends="create">
+        <copy todir="${server}webapps\lab10\WEB-INF\">
+            <fileset dir="${work}WEB-INF"/>
+        </copy>
+
+        <copy todir="${server}webapps\lab10\jsp">
+            <fileset dir="${work}jsp"/>
+        </copy>
+
+
+        <copy todir="${server}webapps\lab10\WEB-INF\classes">
+            <fileset dir="${work}build"/>
+        </copy>
+
+        <copy file="${work}index.jsp" todir="${server}webapps\lab10"/>
+
+    </target>
+
+
+</project>

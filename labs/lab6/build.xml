@@ -1,0 +1,58 @@
+<project name="lab6" default="copy">
+    <target name="init">
+        <echo message="Build Lab6"/>
+        <property name="server"
+                  value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\"/>
+        <property name="work"
+                  value="D:\!internet\labs\lab6\"/>
+        <property name="vm_dir" value="\\HOME-PC\webapps\lab6\"/>
+
+    </target>
+    <target name="compile" depends="init">
+        <javac srcdir="${work}/src/lab6" destdir="${work}/build">
+            <classpath>
+                <fileset dir="${work}/WEB-INF/lib"/>
+            </classpath>
+        </javac>
+    </target>
+    <target name="create" depends="compile">
+        <delete dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}WEB-INF\classes"/>
+
+        <delete dir="${server}webapps/lab6/"/>
+        <mkdir dir="${server}webapps/lab6/"/>
+        <mkdir dir="${server}webapps/lab6/WEB-INF"/>
+    </target>
+    <target name="copy" depends="compile">
+        <copy file="${work}WEB-INF/web.xml"
+                todir="${server}webapps/lab6/WEB-INF/"/>
+        <copy todir="${server}webapps/lab6">
+                <fileset dir="${work}/jsp"/>
+        </copy>
+        <copy todir="${server}webapps/lab6">
+            <fileset dir="${work}/html"/>
+        </copy>
+        <copy todir="${server}webapps/lab6/WEB-INF/classes">
+            <fileset dir="${work}/build"/>
+        </copy>
+        <copy todir="${server}/webapps/lab6/WEB-INF/lib">
+            <fileset dir="${work}/WEB-INF/lib"/>
+        </copy>
+
+        <copy file="${work}WEB-INF/web.xml"
+              todir="${vm_dir}WEB-INF/"/>
+        <copy todir="${vm_dir}">
+            <fileset dir="${work}/jsp"/>
+        </copy>
+        <copy todir="${vm_dir}">
+            <fileset dir="${work}/html"/>
+        </copy>
+        <copy todir="${vm_dir}WEB-INF/classes">
+            <fileset dir="${work}/build"/>
+        </copy>
+        <copy todir="${vm_dir}WEB-INF/lib">
+            <fileset dir="${work}/WEB-INF/lib"/>
+        </copy>
+    </target>
+</project>

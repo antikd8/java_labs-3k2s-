@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1" metadata-complete="true">
+
+  <display-name>lab4</display-name>
+
+  <servlet>
+    <servlet-name>afternoon</servlet-name>
+    <servlet-class>afternoon</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>afternoon</servlet-name>
+    <url-pattern>/afternoon</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Jjj</servlet-name>
+    <servlet-class>Jjj</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Jjj</servlet-name>
+    <url-pattern>/Jjj</url-pattern>
+  </servlet-mapping>
+
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+
+  <welcome-file-list>
+    <welcome-file>morning.jsp</welcome-file>
+  </welcome-file-list>
+
+  <welcome-file-list>
+    <welcome-file>afternoon.jsp</welcome-file>
+  </welcome-file-list>
+
+  <welcome-file-list>
+    <welcome-file>evening.jsp</welcome-file>
+  </welcome-file-list>
+  <welcome-file-list>
+    <welcome-file>night.jsp</welcome-file>
+  </welcome-file-list>
+
+
+
+
+</web-app>

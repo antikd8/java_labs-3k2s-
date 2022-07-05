@@ -1,0 +1,63 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-oauth-client-1.33.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/failureaccess-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-jackson2-1.20.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-1.39.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/gson-2.9.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jsr305-1.3.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/tomcat-el-api-8.5.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-gson-1.39.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/commons-httpclient-3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jcl-over-slf4j-1.7.25.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/checker-qual-3.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-oauth-client-jetty-1.33.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/opencensus-api-0.28.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/gson-2.8.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/error_prone_annotations-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-apache-v2-1.41.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-api-client-1.34.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/opencensus-api-0.31.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-gson-1.41.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jsp-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-1.41.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-oauth-client-java6-1.33.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/opencensus-contrib-http-util-0.28.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-gson-1.41.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/j2objc-annotations-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jtds-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/error_prone_annotations-2.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-apache-v2-1.39.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-api-services-drive-v3-rev20211107-1.32.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/httpcore-4.4.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-oauth-client-1.31.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-1.41.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jsr305-3.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/commons-codec-1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/httpcore-4.4.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jackson-core-2.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-api-client-1.32.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/jackrabbit-webdav-2.3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-http-client-1.20.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/sardine.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/httpclient-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/grpc-context-1.27.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/opencensus-contrib-http-util-0.31.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/httpclient-4.5.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/httpcore-4.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-oauth-client-1.33.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/guava-30.1.1-android.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/checker-compat-qual-2.5.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/guava-31.1-jre.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/google-api-client-1.4.1-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/WEB-INF/lib/slf4j-api-1.7.25.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

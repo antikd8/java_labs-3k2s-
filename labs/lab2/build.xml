@@ -1,0 +1,40 @@
+<project name="lab2" default = "copy">
+    <target name="init">
+        <echo message="Building lab2 Project" />
+        <property name="vm_dir" value="\\HOME-PC\webapps\lab2\"/>
+        <property name="server" value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps\"/>
+        <property name="project_dir" value="D:\!internet\labs\lab2\"/>
+    </target>
+    <target name="compile" depends="init">
+        <delete verbose="true">
+            <fileset dir="${project_dir}build"/>
+        </delete>
+        <javac srcdir="${project_dir}src"
+                destdir="${project_dir}build"
+                classpath="C:\Program Files\Apache Software Foundation\Tomcat 8.5\lib\servlet-api.jar"/>
+    </target>
+    <target name="create" depends ="compile">
+        <delete dir= "${server}lab2\" />
+        <mkdir dir= "${server}lab2\" />
+        <mkdir dir= "${server}lab2\WEB-INF" />
+        <delete dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}"/>
+        <mkdir dir="${vm_dir}WEB-INF\classes"/>
+    </target>
+    <target name="copy" depends ="create">
+        <copy file= "${project_dir}build.xml" todir="${server}lab2\WEB-INF\" />
+        <copy file= "${project_dir}WEB-INF\web.xml" todir="${server}lab2\WEB-INF\" />
+        <copy file= "${project_dir}index.html" todir="${server}lab2\" />
+        <copy todir="${server}lab2\WEB-INF\classes">
+            <fileset dir="${project_dir}build"/>
+        </copy>
+
+        <copy file= "${project_dir}build.xml" todir="${vm_dir}WEB-INF\" />
+        <copy file= "${project_dir}WEB-INF\web.xml" todir="${vm_dir}WEB-INF\" />
+        <copy file= "${project_dir}index.html" todir="${vm_dir}" />
+        <copy todir="${vm_dir}WEB-INF\classes">
+            <fileset dir="${project_dir}build"/>
+        </copy>
+
+    </target>
+</project> 

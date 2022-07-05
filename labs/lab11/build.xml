@@ -1,0 +1,58 @@
+<project name="lab11" default="copy">
+
+    <target name="init">
+        <echo message="Building lab11 Project"/>
+        <property name="server"
+                  value="C:\Program Files\Apache Software Foundation\Tomcat 8.5\"/>
+        <property name="work"
+                  value="D:\!internet\labs\lab11\"/>
+    </target>
+
+    <target name="compile" depends="init">
+
+        <delete verbose="true">
+            <fileset dir="${work}build"/>
+        </delete>
+
+
+        <javac
+                target="8"
+                includeantruntime="false"
+                srcdir="${work}src"
+                destdir="${work}build">
+            <classpath>
+                <fileset dir="${work}WEB-INF\lib"/>
+            </classpath>
+        </javac>
+
+    </target>
+
+    <target name="create" depends="compile">
+        <delete dir="${server}webapps\lab11\"/>
+        <mkdir dir="${server}webapps\lab11\"/>
+        <mkdir dir="${server}webapps\lab11\WEB-INF"/>
+        <mkdir dir="${server}webapps\lab11\WEB-INF\classes"/>
+        <mkdir dir="${server}webapps\lab11\WEB-INF\lib"/>
+        <mkdir dir="${server}webapps\lab11\jsp"/>
+    </target>
+
+    <target name="copy" depends="create">
+        <copy todir="${server}webapps\lab11\WEB-INF\">
+            <fileset dir="${work}WEB-INF"/>
+        </copy>
+
+        <copy todir="${server}webapps\lab11\jsp">
+            <fileset dir="${work}jsp"/>
+        </copy>
+
+
+        <copy todir="${server}webapps\lab11\WEB-INF\classes">
+            <fileset dir="${work}build"/>
+        </copy>
+
+        <copy file="${work}index.jsp" todir="${server}webapps\lab11"/>
+
+    </target>
+
+
+</project>
